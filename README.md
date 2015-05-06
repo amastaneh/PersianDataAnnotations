@@ -2,10 +2,8 @@
 Persian DataAnnotations is Localized DataAnnotations which is localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian Asp .Net MVC and other type of Microsoft .Net based application.
 The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
 
-<div direction="rtl" style="text-align: left; direction: rtl;">
-
 ## اعتبار سنجی کنترل ها در .NET با Data Annotation ها
-اعتبار سنجی های سمت کلاینت با استفاده از `DataAnnotation` ها و افزودن چند `Attribute` ساده مانند `[Required]` یا `[DataType(DataType.Password)]` بسیار ساده و تمیز است. برای فارسی سازی آن کافیست این کتابخانه را با استفاده نیوگت یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
+&#x202b;اعتبار سنجی های سمت کلاینت با استفاده از `DataAnnotation` ها و افزودن چند `Attribute` ساده مانند `[Required]` یا `[DataType(DataType.Password)]` بسیار ساده و تمیز است. برای فارسی سازی آن کافیست این کتابخانه را با استفاده نیوگت یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
 
 برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
 
