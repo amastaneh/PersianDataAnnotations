@@ -40,7 +40,7 @@ protected void Application_Start()
 
 ## <a name="license"></a> License
 
-This project is dedicated to public and is free for all uses, commercial or otherwise.
+The project is dedicated to public and is free for all uses, commercial or otherwise.
 Supported by [Web Design Iran](http://webdesigniran.com)
 
 این پروژه تحت حمایت شرکت 
