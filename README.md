@@ -3,11 +3,8 @@ Persian DataAnnotations is Localized DataAnnotations which is localization of Sy
 The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
 
 ## اعتبار سنجی کنترل ها در .NET با Data Annotation ها
-<div style="text-align: left; direction: rtl;">
-
 اعتبار سنجی های سمت کلاینت با استفاده از `DataAnnotation` ها و افزودن چند `Attribute` ساده مانند [Required] یا [DataType(DataType.Password)] بسیار ساده و تمیز است. برای فارسی سازی آن کافیست این کتابخانه را با استفاده نیوگت یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
 
-</div>
 برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
 
 
@@ -28,8 +25,6 @@ protected void Application_Start()
 ```
 
 ## نکات
-<div style="text-align: left; direction: rtl;">
-
 *	امکان تغییر `Resource` برای جلوگیری از تکرار `ErrorMessageResourceType` در هنگام `RegisterAdapters` دیده شده است
 *	با جستجوی عنوان پروژه در `Nuget` می توانید از ابزار `Nuget` در ویژوال استودیو استفاده کنید و کتابخانه را به سادگی به پروژه اضافه کنید
 *	سعی شده نقطه از آخر پیام ها حذف شود برای انطباق بیشتر با برنامه های چپ به راست
