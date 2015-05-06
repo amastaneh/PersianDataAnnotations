@@ -26,7 +26,7 @@ protected void Application_Start()
 
 ## نکات
 *	&#x202b;امکان تغییر `Resource` برای جلوگیری از تکرار `ErrorMessageResourceType` در هنگام `RegisterAdapters` دیده شده است
-*	&#x202b;با جستجوی عنوان پروژه در `Nuget` می توانید از ابزار `Nuget` در ویژوال استودیو استفاده کنید و کتابخانه را به سادگی به پروژه اضافه کنید
+*	&#x202b;با جستجوی عنوان پروژه در `NuGet` می توانید از ابزار `NuGet` در ویژوال استودیو استفاده کنید و کتابخانه را به سادگی به پروژه اضافه کنید
 *	سعی شده نقطه از آخر پیام ها حذف شود برای انطباق بیشتر با برنامه های چپ به راست
 *	سعی شده پیام ها با فارسی روان نه پارسی بسیار ادبی و دور از ادبیات عامه بیان شود
 *	سعی شده از بیشتر از است به جای مصدر نادرست باشیدن استفاده شود
@@ -40,9 +40,10 @@ protected void Application_Start()
 
 ## <a name="license"></a> License
 
-This project is dedicated to public and is free for all uses, commercial or otherwise.
+The project is dedicated to public and is free for all uses, commercial or otherwise.
 Supported by [Web Design Iran](http://webdesigniran.com)
 
 این پروژه تحت حمایت شرکت 
 [طراحی وب ایران](http://webdesigniran.com)
  بوده و برای استفاده تجاری یا غیر تجاری، رایگان است
+
