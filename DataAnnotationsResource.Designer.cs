@@ -358,6 +358,15 @@ namespace PersianDataAnnotations {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مقدار {0} و {1} با هم یکسان نیستند.
+        /// </summary>
+        internal static string PasswordAttribute_ErrorMessage {
+            get {
+                return ResourceManager.GetString("PasswordAttribute_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to مقدار {0} یک شماره تلفن معتبر نیست.
         /// </summary>
         internal static string PhoneAttribute_ErrorMessage {
