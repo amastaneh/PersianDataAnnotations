@@ -196,11 +196,20 @@ namespace PersianDataAnnotations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to این نوع داده سفارشی نمی تواند خالی باشد.
+        ///   Looks up a localized string similar to این نوع داده نمی تواند خالی باشد.
         /// </summary>
         internal static string DataTypeAttribute_ErrorMessage {
             get {
                 return ResourceManager.GetString("DataTypeAttribute_ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} مناسب نیست.
+        /// </summary>
+        internal static string DateAttribute_ErrorMessage {
+            get {
+                return ResourceManager.GetString("DateAttribute_ErrorMessage", resourceCulture);
             }
         }
         
@@ -223,7 +232,7 @@ namespace PersianDataAnnotations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} فرمت صحیح یک ایمیل را ندارد.
+        ///   Looks up a localized string similar to مقدار {0} فرمت صحیح یک ایمیل را ندارد.
         /// </summary>
         internal static string EmailAddressAttribute_ErrorMessage {
             get {
@@ -264,6 +273,24 @@ namespace PersianDataAnnotations {
         internal static string EnumDataTypeAttribute_TypeNeedsToBeAnEnum {
             get {
                 return ResourceManager.GetString("EnumDataTypeAttribute_TypeNeedsToBeAnEnum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to مقدار {0} باید به صورت تاریخ باشد.
+        /// </summary>
+        internal static string FieldMustBeDate {
+            get {
+                return ResourceManager.GetString("FieldMustBeDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to مقدار {0} باید به صورت عددی باشد.
+        /// </summary>
+        internal static string FieldMustBeNumeric {
+            get {
+                return ResourceManager.GetString("FieldMustBeNumeric", resourceCulture);
             }
         }
         
@@ -358,7 +385,7 @@ namespace PersianDataAnnotations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to مقدار {0} و {1} با هم یکسان نیستند.
+        ///   Looks up a localized string similar to {0} ضروری است.
         /// </summary>
         internal static string PasswordAttribute_ErrorMessage {
             get {
@@ -381,6 +408,24 @@ namespace PersianDataAnnotations {
         internal static string PhoneAttribute_Invalid {
             get {
                 return ResourceManager.GetString("PhoneAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to مقدار {0} برای {1} معتبر نیست.
+        /// </summary>
+        internal static string PropertyValueInvalid {
+            get {
+                return ResourceManager.GetString("PropertyValueInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to یک مقدار مورد نیاز است.
+        /// </summary>
+        internal static string PropertyValueRequired {
+            get {
+                return ResourceManager.GetString("PropertyValueRequired", resourceCulture);
             }
         }
         
@@ -475,7 +520,7 @@ namespace PersianDataAnnotations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to مقدار {0} ضروری است.
+        ///   Looks up a localized string similar to {0} ضروری است.
         /// </summary>
         internal static string RequiredAttribute_ErrorMessage {
             get {
