@@ -5,8 +5,6 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
 &#x202b;اعتبار سنجی های سمت کلاینت با استفاده از `DataAnnotation` ها و افزودن چند `Attribute` ساده مانند `[Required]` یا `[DataType(DataType.Password)]` بسیار ساده و تمیز است. برای فارسی سازی آن کافیست این کتابخانه را با استفاده نیوگت یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
 
-برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
-
 
 ## شیوه استفاده
 1. افزودن به پروژه
@@ -23,6 +21,11 @@ protected void Application_Start()
     PersianDataAnnotationsValidator.RegisterAdapters();
 }
 ```
+
+## دمو
+برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
+![screencapture-webdesigniran com-register](https://cloud.githubusercontent.com/assets/6195199/7538227/bfcb8226-f5b3-11e4-9bcc-b13baef6a4b7.png)
+
 
 ## نکات
 *	&#x202b;امکان تغییر `Resource` برای جلوگیری از تکرار `ErrorMessageResourceType` در هنگام `RegisterAdapters` دیده شده است
