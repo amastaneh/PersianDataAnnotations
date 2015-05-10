@@ -72,12 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PersianModelBinder.cs" />
-    <Compile Include="PersianValidatorClientDataType.cs" />
     <Compile Include="PersianDataAnnotations.cs" />
     <Compile Include="PersianMetadataProvider.cs" />
-    <Compile Include="PersianValidatorDataErrorInfo.cs" />
+    <Compile Include="PersianModelBinder.cs" />
+    <Compile Include="PersianValidatorClientDataType.cs" />
     <Compile Include="PersianValidatorDataAnnotations.cs" />
+    <Compile Include="PersianValidatorDataErrorInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataAnnotationsResource.Designer.cs">
       <AutoGen>True</AutoGen>
