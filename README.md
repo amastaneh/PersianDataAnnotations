@@ -48,9 +48,11 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 
 
 ## پشتیبانی
+لطفا اگر ترجمه بهتری برای یک عبارت یافته اید
 لطفا اگر مشکلی مشاهده کردید
-- &#x202b;یا Fork & pull
-- &#x202b;یا Share Issue
+لطفا اگر پیشنهادی دارید
+- &#x202b;یا Fork & Pull کنید
+- &#x202b;یا Share Issue کنید
 - &#x202b;یا لااقل یه تلفن یا موبایل بزنید به [طراحی وب ایران](http://webdesigniran.com)
 
 ## <a name="license"></a> License
