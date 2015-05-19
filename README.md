@@ -7,18 +7,28 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 
 
 ## شیوه استفاده
-1. افزودن به پروژه
-
+  1- افزودن به پروژه
 ```
   PM> Install-Package PersianDataAnnotations
 ```
 
-2. نمونه فراخوانی و اجرا
-
+  2- نمونه فراخوانی و اجرا
 ```c#
 protected void Application_Start()
 {
     PersianDataAnnotationsValidator.RegisterAdapters();
+}
+```
+
+  3- فارسی سازی خطاهای مربوط به رمز عبور
+```c#
+public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
+{
+    ...
+    manager.PasswordValidator = new PasswordValidator 
+    /// جایگزین شود با خط زیر
+  	manager.PasswordValidator = new PersianPasswordValidator
+    ...
 }
 ```
 
