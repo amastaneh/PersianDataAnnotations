@@ -35,8 +35,11 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 ## دمو
 برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
 
+<img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7538227/bfcb8226-f5b3-11e4-9bcc-b13baef6a4b7.png" width="320">
 
-<img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7538227/bfcb8226-f5b3-11e4-9bcc-b13baef6a4b7.png" height="280">
+نمونه فارسی سازی خطاهای مربوط به رمز عبور
+
+<img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7716477/dd77299a-fea7-11e4-8b85-695e9f919f00.png" width="320">
 
 
 ## نکات
