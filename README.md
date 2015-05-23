@@ -42,6 +42,19 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 
 <img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7716477/dd77299a-fea7-11e4-8b85-695e9f919f00.png" width="320">
 
+## ترجمه
+&#x202b;‫هنوز احتمال دارد که خطاهایی فارسی نشده باشند. از نسخه 1.5 به بعد یک متد استاتیک ترجمه نظیر به نظیر خطا هم اضافه شده که خطاها را می تواند قبل از نمایش تا حد امکان ترجمه کند.
+```c#
+private void AddErrors(IdentityResult result)
+{
+  foreach (var error in result.Errors)
+	{
+	  ModelState.AddModelError("", PersianDataAnnotations.TranslateError.Translate(error));
+	}
+}
+```
+&#x202b; متد بالا در کلاس های پیش فرض AccountController یا مشابه آن وجود دارد فقط به آن ترجمه متن خطا اضافه شده است
+
 
 ## نکات
 *	&#x202b;امکان تغییر `Resource` برای جلوگیری از تکرار `ErrorMessageResourceType` در هنگام `RegisterAdapters` دیده شده است
