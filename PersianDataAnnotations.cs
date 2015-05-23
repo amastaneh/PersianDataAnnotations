@@ -21,6 +21,7 @@ namespace PersianDataAnnotations
 			ModelValidatorProviders.Providers.Add(new PersianValidatorClientDataType());
 
 			/// DefaultModelBinder 
+
 			ModelBinders.Binders.DefaultBinder = new PersianModelBinder();
 		}
 

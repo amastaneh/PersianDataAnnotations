@@ -538,7 +538,7 @@ namespace PersianDataAnnotations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to حداقل طول {0} باید {1} و حداکثر {2} کاراکتر باشد.
+        ///   Looks up a localized string similar to حداقل طول {0} باید {2} و حداکثر {1} کاراکتر باشد.
         /// </summary>
         internal static string StringLengthAttribute_ErrorMessage {
             get {

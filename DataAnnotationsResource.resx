@@ -184,7 +184,7 @@
 	<data name="StringLengthAttribute_InvalidMaxLength" xml:space="preserve"><value>The maximum length must be a nonnegative integer.</value></data>
 	<data name="StringLengthAttribute_ValidationError" xml:space="preserve"><value>The field {0} must be a string with a maximum length of {1}.</value></data>
 	<data name="StringLengthAttribute_ValidationErrorIncludingMinimum" xml:space="preserve"><value>The field {0} must be a string with a minimum length of {2} and a maximum length of {1}.</value></data>
-	<data name="StringLengthAttribute_ErrorMessage" xml:space="preserve"><value>حداقل طول {0} باید {1} و حداکثر {2} کاراکتر باشد</value></data>
+	<data name="StringLengthAttribute_ErrorMessage" xml:space="preserve"><value>حداقل طول {0} باید {2} و حداکثر {1} کاراکتر باشد</value></data>
 
 	<data name="UrlAttribute_Invalid" xml:space="preserve"><value>The {0} field is not a valid fully-qualified http, https, or ftp URL.</value></data>
 	<data name="UrlAttribut_ErrorMessage" xml:space="preserve"><value>مقدار {0} حاوی یک آدرس صحیح http، https یا ftp نیست</value></data>

@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -72,9 +76,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Identity\MinimumLengthValidator.cs" />
+    <Compile Include="Identity\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="PersianDataAnnotations.cs" />
     <Compile Include="PersianMetadataProvider.cs" />
     <Compile Include="PersianModelBinder.cs" />
+    <Compile Include="Identity\PersianPasswordValidator.cs" />
     <Compile Include="PersianValidatorClientDataType.cs" />
     <Compile Include="PersianValidatorDataAnnotations.cs" />
     <Compile Include="PersianValidatorDataErrorInfo.cs" />
@@ -84,12 +95,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataAnnotationsResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="TranslateError.cs" />
+    <Compile Include="TranslateResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TranslateResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DataAnnotationsResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DataAnnotationsResource.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Identity\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranslateResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TranslateResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
