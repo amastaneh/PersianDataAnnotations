@@ -77,15 +77,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Identity\MinimumLengthValidator.cs" />
+    <Compile Include="Identity\PersianPasswordValidator.cs" />
     <Compile Include="Identity\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="PersianDataAnnotations.cs" />
     <Compile Include="PersianMetadataProvider.cs" />
     <Compile Include="PersianModelBinder.cs" />
-    <Compile Include="Identity\PersianPasswordValidator.cs" />
     <Compile Include="PersianValidatorClientDataType.cs" />
     <Compile Include="PersianValidatorDataAnnotations.cs" />
     <Compile Include="PersianValidatorDataErrorInfo.cs" />
@@ -97,9 +97,9 @@
     </Compile>
     <Compile Include="TranslateError.cs" />
     <Compile Include="TranslateResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>TranslateResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -109,9 +109,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Identity\Resources.resx">
+      <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TranslateResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

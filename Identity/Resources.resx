@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="DefaultError" xml:space="preserve">
+    <value>یک مشکل ناشناخته رخ داده است</value>
+    <comment>Default identity result error message</comment>
+  </data>
+	<data name="DuplicateEmail" xml:space="preserve">
+    <value>آدرس ایمیل '{0}' قبلا گرفته شده است</value>
+    <comment>error for duplicate emails</comment>
+  </data>
+	<data name="DuplicateName" xml:space="preserve">
+    <value>نام {0} قبلا گرفته شده است</value>
+    <comment>error for duplicate usernames</comment>
+  </data>
+	<data name="ExternalLoginExists" xml:space="preserve">
+    <value>یک کاربر با این لاگین خارجی وجود دارد</value>
+    <comment>Error when a login already linked</comment>
+  </data>
+	<data name="InvalidEmail" xml:space="preserve">
+    <value>ایمیل '{0}' نامعتبر است</value>
+    <comment>invalid email</comment>
+  </data>
+	<data name="InvalidToken" xml:space="preserve">
+    <value>توکن نامعتبر است</value>
+    <comment>Error when a token is not recognized</comment>
+  </data>
+	<data name="InvalidUserName" xml:space="preserve">
+    <value>نام کاربری {0} نامعتبر است و فقط می تواند حاوی حروف و اعداد باشد</value>
+    <comment>usernames can only contain letters or digits</comment>
+  </data>
+	<data name="LockoutNotEnabled" xml:space="preserve">
+    <value>قفل برای این کاربر فعال نمی باشد</value>
+    <comment>error when lockout is not enabled</comment>
+  </data>
+	<data name="NoTokenProvider" xml:space="preserve">
+    <value>سرویس IUserTokenProvider ثبت نشده است</value>
+    <comment>Error when there is no IUserTokenProvider</comment>
+  </data>
+	<data name="NoTwoFactorProvider" xml:space="preserve">
+    <value>سرویس IUserTwoFactorProvider برای '{0}' ثبت شده است.</value>
+    <comment>Error when there is no provider found</comment>
+  </data>
+	<data name="PasswordMismatch" xml:space="preserve">
+    <value>رمز نامعتبر است.</value>
+    <comment>Error when a password doesn't match</comment>
+  </data>
+	<data name="PasswordRequireDigit" xml:space="preserve">
+    <value>رمز عبور باید حداقل شامل یک کاراکتر رقمی ('۰'-'۹') باشد.</value>
+    <comment>Error when passwords do not have a digit</comment>
+  </data>
+	<data name="PasswordRequireLower" xml:space="preserve">
+    <value>رمز عبور باید حداقل شامل یک حرف کوچک ('a'-'z') باشد.</value>
+    <comment>Error when passwords do not have a lowercase letter</comment>
+  </data>
+	<data name="PasswordRequireNonLetterOrDigit" xml:space="preserve">
+    <value>رمز عبور باید حداقل شامل یک کاراکتر غیر حرفی یا عددی باشد.</value>
+    <comment>Error when password does not have enough letter or digit characters</comment>
+  </data>
+	<data name="PasswordRequireUpper" xml:space="preserve">
+		<value>رمز عبور باید حداقل شامل یک حرف بزرگ ('A'-'Z') باشد.</value>
+		<comment>Error when passwords do not have an uppercase letter</comment>
+  </data>
+	<data name="PasswordTooShort" xml:space="preserve">
+    <value>رمز عبور باید حداقل {0} کاراکتر باشد.</value>
+    <comment>Error message for passwords that are too short</comment>
+  </data>
+	<data name="PropertyTooShort" xml:space="preserve">
+    <value>{0} نمی تواند خالی یا بی مقدار باشد</value>
+    <comment>error for empty or null usernames</comment>
+  </data>
+	<data name="RoleNotFound" xml:space="preserve">
+    <value>نقش/وظیفه {0} وجود ندارد</value>
+    <comment>error when a role does not exist</comment>
+  </data>
+	<data name="StoreNotIQueryableRoleStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IQueryableRoleStore&lt;TRole&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIQueryableUserStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IQueryableUserStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserClaimStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserClaimStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserConfirmationStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserConfirmationStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserEmailStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserEmailStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserLockoutStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserLockoutStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserLoginStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserLoginStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserPasswordStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserPasswordStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserPhoneNumberStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserPhoneNumberStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserRoleStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserRoleStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserSecurityStampStore" xml:space="preserve">
+    <value>Store پیاده سازی نکرده است IUserSecurityStampStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="StoreNotIUserTwoFactorStore" xml:space="preserve">
+    <value>Store  پیاده سازی نکرده است IUserTwoFactorStore&lt;TUser&gt;.</value>
+    <comment>error when the store does not implement this interface</comment>
+  </data>
+	<data name="UserAlreadyHasPassword" xml:space="preserve">
+    <value>کاربر در این لحظه یک رمز عبور دارد.</value>
+    <comment>error when AddPassword called when a user already has a password</comment>
+  </data>
+	<data name="UserAlreadyInRole" xml:space="preserve">
+    <value>کاربر در این لحظه شامل این نقش/وظیفه است</value>
+    <comment>Error when a user is already in a role</comment>
+  </data>
+	<data name="UserIdNotFound" xml:space="preserve">
+    <value>شناسه کاربری یافت نشد</value>
+    <comment>No user with this id found</comment>
+  </data>
+	<data name="UserNameNotFound" xml:space="preserve">
+    <value>کاربر {0} وجود ندارد</value>
+    <comment>error when a user does not exist</comment>
+  </data>
+	<data name="UserNotInRole" xml:space="preserve">
+    <value>کاربر این نقش/وظیفه را ندارد</value>
+    <comment>Error when a user is not in the role</comment>
+  </data>
+</root>
