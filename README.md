@@ -7,14 +7,12 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 
 
 ## شیوه استفاده
-1. افزودن به پروژه
-
+  1- افزودن به پروژه
 ```
   PM> Install-Package PersianDataAnnotations
 ```
 
-2. نمونه فراخوانی و اجرا
-
+  2- نمونه فراخوانی و اجرا
 ```c#
 protected void Application_Start()
 {
@@ -22,11 +20,26 @@ protected void Application_Start()
 }
 ```
 
+  3- فارسی سازی خطاهای مربوط به رمز عبور
+```c#
+public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
+{
+    ...
+    manager.PasswordValidator = new PasswordValidator 
+    /// جایگزین شود با خط زیر
+  	manager.PasswordValidator = new PersianPasswordValidator
+    ...
+}
+```
+
 ## دمو
 برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
 
+<img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7538227/bfcb8226-f5b3-11e4-9bcc-b13baef6a4b7.png" width="320">
 
-<img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7538227/bfcb8226-f5b3-11e4-9bcc-b13baef6a4b7.png" height="280">
+نمونه فارسی سازی خطاهای مربوط به رمز عبور
+
+<img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7716477/dd77299a-fea7-11e4-8b85-695e9f919f00.png" width="320">
 
 
 ## نکات
@@ -38,9 +51,11 @@ protected void Application_Start()
 
 
 ## پشتیبانی
+لطفا اگر ترجمه بهتری برای یک عبارت یافته اید
 لطفا اگر مشکلی مشاهده کردید
-- &#x202b;یا Fork & pull
-- &#x202b;یا Share Issue
+لطفا اگر پیشنهادی دارید
+- &#x202b;یا Fork & Pull کنید
+- &#x202b;یا Share Issue کنید
 - &#x202b;یا لااقل یه تلفن یا موبایل بزنید به [طراحی وب ایران](http://webdesigniran.com)
 
 ## <a name="license"></a> License
