@@ -5,11 +5,15 @@ Persian DataAnnotations is Localized DataAnnotations which is localization of Sy
 The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
 
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
-&#x202b;اعتبار سنجی های سمت کلاینت با استفاده از `DataAnnotation` ها و افزودن چند `Attribute` ساده مانند `[Required]` یا `[DataType(DataType.Password)]` بسیار ساده و تمیز است. برای فارسی سازی آن کافیست این کتابخانه را با استفاده نیوگت یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
+&#x202b;اعتبار سنجی های سمت کلاینت با `DataAnnotation` ها و افزودن `[Required]` یا `[DataType(DataType.Password)]` یا دیگر `Attribute` ها بسیار ساده و تمیز است. برای فارسی سازی کافی است این کتابخانه را با استفاده [نیوگت](https://nuget.org/packages/PersianDataAnnotations) یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
 
 
 ## شیوه استفاده
+
   1- افزودن به پروژه
+  
+با استفاده از [نیوگت](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+
 ```
   PM> Install-Package PersianDataAnnotations
 ```
