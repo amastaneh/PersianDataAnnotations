@@ -31,7 +31,7 @@ protected void Application_Start()
 
   3- فارسی سازی خطاهای مربوط به رمز عبور
   
-  این خطا را اگر اضافه کنید خطاهای قسمت ثبت نام هم فارسی می شوند
+با این تغییر کوچک خطاهای قسمت ثبت نام هم فارسی می شوند
 ```c#
 public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
 {
