@@ -22,7 +22,7 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 ```c#
 protected void Application_Start()
 {
-    PersianDataAnnotationsValidator.RegisterAdapters();
+    PersianDataAnnotations.PersianDataAnnotations.Register();
 }
 ```
 
