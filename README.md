@@ -11,6 +11,7 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 ## شیوه استفاده
 
   1- افزودن به پروژه
+  
   افزودن آن بسیار بسیار ساده است
   با استفاده از [نیوگت](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
 
@@ -19,6 +20,7 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 ```
 
   2- نمونه فراخوانی و اجرا
+  
   یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
 ```c#
 protected void Application_Start()
@@ -28,6 +30,7 @@ protected void Application_Start()
 ```
 
   3- فارسی سازی خطاهای مربوط به رمز عبور
+  
   این خطا را اگر اضافه کنید خطاهای قسمت ثبت نام هم فارسی می شوند
 ```c#
 public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
