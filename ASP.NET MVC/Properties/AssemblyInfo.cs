@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PersianDataAnnotations")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Web Design Iran")]
+[assembly: AssemblyCompany("WebDesignIran")]
 [assembly: AssemblyProduct("PersianDataAnnotations")]
-[assembly: AssemblyCopyright("Copyright ©  2015 - Web Design Iran")]
+[assembly: AssemblyCopyright("Copyright © 2015-2017 WebDesignIran")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
