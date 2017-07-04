@@ -99,7 +99,7 @@ private void AddErrors(IdentityResult result)
 ```
 &#x202b; متد بالا در کلاس های پیش فرض AccountController یا مشابه آن وجود دارد فقط به آن ترجمه متن خطا اضافه شده است
 
-&#x202b;‫البته مشابه این متد استاتیک برای نسخه های ASP.NET MVC Core هم وجود دارد
+&#x202b;‫البته مشابه این متد استاتیک برای نسخه های ASP.NET Core MVC هم ارائه شده است
 ```c#
 var result = PersianDataAnnotationsCore.PersianValidationMetadataProvider.ToPersian(value)
 ```
