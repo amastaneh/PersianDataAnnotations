@@ -17,10 +17,10 @@ Persian DataAnnotations as DataAnnotations localizer library, is a localization 
 
   1- افزودن به پروژه
   
-&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotationsCore) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
-  PM> Install-Package PersianDataAnnotations
+  PM> Install-Package PersianDataAnnotationsCore
 ```
 
   2- نمونه فراخوانی و اجرا
@@ -43,7 +43,7 @@ public void ConfigureServices(IServiceCollection services)
 &#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
-  PM> Install-Package PersianDataAnnotations -Version 1.5.1
+  PM> Install-Package PersianDataAnnotations -Version
 ```
 
   2- نمونه فراخوانی و اجرا
