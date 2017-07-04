@@ -5,16 +5,35 @@ Persian DataAnnotations is Localized DataAnnotations which is localization of Sy
 The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
 
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
-&#x202b;اعتبار سنجی های سمت کلاینت با `DataAnnotation` ها و افزودن `[Required]` یا `[DataType(DataType.Password)]` یا دیگر `Attribute` ها بسیار ساده و تمیز است. برای فارسی سازی کافی است این کتابخانه را با استفاده [نیوگت](https://nuget.org/packages/PersianDataAnnotations) یا دستی به پروژه اضافه کرده و متد `RegisterAdapters` آن را فقط یکبار در مثلا `Application_Start` فراخوانی کنید. کار تمام است. 
+&#x202b;استفاده از `DataAnnotation` ها و افزودن `[Required]` یا `[DataType(DataType.Password)]` یا دیگر `Attribute` ها، کار اعتبارسنجی سمت کلاینت را بسیار ساده کرده است. برای فارسی سازی مقادیر پیش فرض کافی است این کتابخانه را با استفاده [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) یا به صورت دستی به پروژه اضافه کنید. 
+
+&#x202b;در پروژه‌های `ASP.NET MVC` کافی است `RegisterAdapters` را فقط یکبار در `Application_Start` فراخوانی کنید.
+
+&#x202b;در پروژه‌های `ASP.NET Core MVC`  باید `AddDataAnnotationsLocalization` را در `ConfigureServices` فراخوانی کنید.
 
 
-## شیوه استفاده
+## &#x202b; شیوه استفاده در ASP.NET Core MVC
 
   1- افزودن به پروژه
   
-  افزودن آن بسیار بسیار ساده است
-  با استفاده از [نیوگت](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+  
+```
+  PM> Install-Package PersianDataAnnotations
+```
 
+  2- نمونه فراخوانی و اجرا
+  
+  یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
+
+
+
+## &#x202b; شیوه استفاده در ASP.NET MVC
+
+  1- افزودن به پروژه
+  
+&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+  
 ```
   PM> Install-Package PersianDataAnnotations
 ```
