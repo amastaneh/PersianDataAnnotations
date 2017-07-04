@@ -1,46 +1,39 @@
-## &#x202b;فارسی سازی خطاهای MVC
-## &#x202b;DataAnnotations فارسی
 ## Persian DataAnnotations
-Persian DataAnnotations is Localized DataAnnotations which is localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian Asp .Net MVC and other type of Microsoft .Net based application.
-The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
+Persian DataAnnotations as DataAnnotations localizer library, is a localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian ASP.NET Core MVC & ASP.NET MVC based applications. The localization of built-in resource of DataAnnotations is a bit hard to work (specialy in ASP.NET MVC) and this library helps your project for localization error messages just with single call a method. `Fork` and `Translate` RESX resources for your language ;-)
+
 
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
 &#x202b;استفاده از `DataAnnotation` ها و افزودن `[Required]` یا `[DataType(DataType.Password)]` یا دیگر `Attribute` ها، کار اعتبارسنجی سمت کلاینت را بسیار ساده کرده است. برای فارسی سازی مقادیر پیش فرض کافی است این کتابخانه را با استفاده [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) یا به صورت دستی به پروژه اضافه کنید. 
 
-&#x202b;در پروژه‌های `ASP.NET MVC` کافی است `RegisterAdapters` را فقط یکبار در `Application_Start` فراخوانی کنید.
-
-&#x202b;در پروژه‌های `ASP.NET Core MVC`  باید `AddDataAnnotationsLocalization` را در `ConfigureServices` فراخوانی کنید.
 
 
 ## &#x202b; شیوه استفاده در ASP.NET Core MVC
 
-  1- افزودن به پروژه
-  
-&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+  1- &#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotationsCore) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
-  PM> Install-Package PersianDataAnnotations
+  PM> Install-Package PersianDataAnnotationsCore
 ```
+  2- &#x202b; فقط همین یک خط را اضافه کنید و کار تمام میشود
 
-  2- نمونه فراخوانی و اجرا
-  
-  یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
+```c#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc(options => options.ModelMetadataDetailsProviders.Add(new PersianDataAnnotationsCore.PersianValidationMetadataProvider()));
+}
+```
 
 
 
 ## &#x202b; شیوه استفاده در ASP.NET MVC
 
-  1- افزودن به پروژه
-  
-&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+  1- &#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
-  PM> Install-Package PersianDataAnnotations
+  PM> Install-Package PersianDataAnnotations -Version
 ```
 
-  2- نمونه فراخوانی و اجرا
-  
-  یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
+  2- &#x202b; یعنی فقط همین یک خط را اضافه کنید و کار تمام میشود
 ```c#
 protected void Application_Start()
 {
@@ -48,9 +41,8 @@ protected void Application_Start()
 }
 ```
 
-  3- فارسی سازی خطاهای مربوط به رمز عبور
-  
-با این تغییر کوچک خطاهای قسمت ثبت نام هم فارسی می شوند
+  3- &#x202b; فارسی سازی خطاهای مربوط به رمز عبور و قسمت ثبت نام
+
 ```c#
 public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
 {
@@ -62,6 +54,8 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 }
 ```
 
+
+
 ## دمو
 برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
 
@@ -71,8 +65,11 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 
 <img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7716477/dd77299a-fea7-11e4-8b85-695e9f919f00.png" width="320">
 
+
+
 ## ترجمه
-&#x202b;‫هنوز احتمال دارد که خطاهایی فارسی نشده باشند. از نسخه 1.5 به بعد یک متد استاتیک ترجمه نظیر به نظیر خطا هم اضافه شده که خطاها را می تواند قبل از نمایش تا حد امکان ترجمه کند.
+&#x202b;‫هنوز احتمال دارد که خطاهایی فارسی نشده باشند. در نسخه های مربوط به پروژه های ASP.NET MVC یک متد استاتیک ترجمه نظیر به نظیر خطا هم اضافه شده که خطاها را می تواند قبل از نمایش تا حد امکان ترجمه کند.
+
 ```c#
 private void AddErrors(IdentityResult result)
 {
@@ -84,6 +81,12 @@ private void AddErrors(IdentityResult result)
 ```
 &#x202b; متد بالا در کلاس های پیش فرض AccountController یا مشابه آن وجود دارد فقط به آن ترجمه متن خطا اضافه شده است
 
+&#x202b;‫البته مشابه این متد استاتیک برای نسخه های ASP.NET Core MVC هم ارائه شده است
+```c#
+var result = PersianDataAnnotationsCore.PersianValidationMetadataProvider.ToPersian(value)
+```
+
+
 
 ## نکات
 *	&#x202b;امکان تغییر `Resource` برای جلوگیری از تکرار `ErrorMessageResourceType` در هنگام `RegisterAdapters` دیده شده است
@@ -91,6 +94,7 @@ private void AddErrors(IdentityResult result)
 *	سعی شده نقطه از آخر پیام ها حذف شود برای انطباق بیشتر با برنامه های چپ به راست
 *	سعی شده پیام ها با فارسی روان نه پارسی بسیار ادبی و دور از ادبیات عامه بیان شود
 *	سعی شده از بیشتر از است به جای مصدر نادرست باشیدن استفاده شود
+
 
 
 ## پشتیبانی
