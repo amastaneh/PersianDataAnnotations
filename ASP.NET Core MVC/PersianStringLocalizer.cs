@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Localization;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Linq;
+using System.Reflection;
+using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
 using System.Globalization;
 
@@ -6,22 +9,49 @@ namespace PersianDataAnnotationsCore
 {
     public class PersianStringLocalizer : IStringLocalizer
     {
-        private string _CultureName;
+        private string _CultureName = null;
+        private bool _JustInPersianCulture = false;
+        private static SortedList<string, string> _LocalStrings = null;
 
-        public PersianStringLocalizer() : this(CultureInfo.CurrentUICulture)
-        {
-        }
+        // در صورتی که تنظیم شده باشد که در فرهنگ فارسی کند برای سایر فرهنگ ها نیازی به ترجمه نیست
+        private bool IsLocalizationRequired => !(_JustInPersianCulture && _CultureName != "fa-IR");
 
-        public PersianStringLocalizer(CultureInfo cultureInfo)
+
+
+        public PersianStringLocalizer() : this(CultureInfo.CurrentUICulture, false) { }
+
+        /// <param name="justInPersianCulture">فقط در حالتی که فرهنگ برای ایران تنظیم شده باشد اعمال شود. مناسب برای برنامه های چند زبانه.</param>
+        public PersianStringLocalizer(CultureInfo cultureInfo, bool justInPersianCulture = false)
         {
-            _CultureName = cultureInfo.Name;
+            _CultureName = cultureInfo?.Name;
+            _JustInPersianCulture = justInPersianCulture;
+
+            // تهیه و ذخیره فهرست ترجمه در حافظه
+            // اگر قرار به ترجمه نیست نیازی به پر کردن لیست هم نیست
+            if (IsLocalizationRequired && _LocalStrings == null)
+            {
+                _LocalStrings = new SortedList<string, string>();
+                typeof(DataAnnotationsResources)
+                    .GetProperties(BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.GetProperty)
+                    .ToList()
+                    .ForEach(info =>
+                    {
+                        string Key = info?.Name;
+                        string Value = info?.GetValue(null)?.ToString()?.Trim() ?? null;
+                        string ValueFa = DataAnnotationsResourcesFa.ResourceManager?.GetString(Key)?.Trim();
+                        if (!string.IsNullOrEmpty(Value) && !string.IsNullOrEmpty(ValueFa))
+                        {
+                            _LocalStrings.Add(Value, ValueFa);
+                        }
+                    });
+            }
         }
 
         public LocalizedString this[string name]
         {
             get
             {
-                var value = GetString(name);
+                var value = GetTranslateString(name);
                 return new LocalizedString(name, value ?? name, resourceNotFound: value == null);
             }
         }
@@ -30,29 +60,38 @@ namespace PersianDataAnnotationsCore
         {
             get
             {
-                var format = GetString(name);
+                var format = GetTranslateString(name);
                 var value = string.Format(format ?? name, arguments);
                 return new LocalizedString(name, value, resourceNotFound: format == null);
             }
         }
 
-        private string GetString(string name)
+        private string GetTranslateString(string name)
         {
-            return $"ترجمه {name}";
+            if (!IsLocalizationRequired) return null;
+            if (_LocalStrings == null) return null;
+
+            // پیدا کردن ترجمه
+            string StringResult = "";
+            return ((_LocalStrings.TryGetValue(name, out StringResult) ? StringResult : null) ?? null);
         }
 
-        public IStringLocalizer WithCulture(CultureInfo culture)
-        {
-            return new PersianStringLocalizer(culture);
-        }
+        public IStringLocalizer WithCulture(CultureInfo culture) => new PersianStringLocalizer(culture);
+
+
         public IEnumerable<LocalizedString> GetAllStrings(bool includeAncestorCultures)
         {
-            //return _db
-            //    .Localizations
-            //    .Where(l => l.Culture == _cultureName)
-            //    .Select(l => new LocalizedString(l.Key, l.Value, true));
-
-            return new List<LocalizedString>() { new LocalizedString("sample", "نمونه ترجمه") };
+            if (IsLocalizationRequired == false || _LocalStrings == null || _LocalStrings.Count() < 1)
+            {
+                return typeof(DataAnnotationsResourcesFa)
+                    .GetProperties(BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.GetProperty)
+                    .ToList()
+                    .Select(info => new LocalizedString(info.Name, info.GetValue(null)?.ToString() ?? null));
+            }
+            else
+            {
+                return _LocalStrings?.Select(str => new LocalizedString(str.Key, str.Value));
+            }
         }
     }
 }
