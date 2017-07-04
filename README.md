@@ -1,5 +1,3 @@
-## &#x202b;فارسی سازی خطاهای MVC
-## &#x202b;DataAnnotations فارسی
 ## Persian DataAnnotations
 Persian DataAnnotations as DataAnnotations localizer library, is a localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian ASP.NET Core MVC & ASP.NET MVC based applications. The localization of built-in resource of DataAnnotations is a bit hard to work (specialy in ASP.NET MVC) and this library helps your project for localization error messages just with single call a method. `Fork` and `Translate` RESX resources for your language ;-)
 
@@ -7,25 +5,16 @@ Persian DataAnnotations as DataAnnotations localizer library, is a localization 
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
 &#x202b;استفاده از `DataAnnotation` ها و افزودن `[Required]` یا `[DataType(DataType.Password)]` یا دیگر `Attribute` ها، کار اعتبارسنجی سمت کلاینت را بسیار ساده کرده است. برای فارسی سازی مقادیر پیش فرض کافی است این کتابخانه را با استفاده [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) یا به صورت دستی به پروژه اضافه کنید. 
 
-&#x202b;در پروژه‌های `ASP.NET MVC` کافی است `RegisterAdapters` را فقط یکبار در `Application_Start` فراخوانی کنید.
-
-&#x202b;در پروژه‌های `ASP.NET Core MVC`  باید `AddDataAnnotationsLocalization` را در `ConfigureServices` فراخوانی کنید.
-
 
 
 ## &#x202b; شیوه استفاده در ASP.NET Core MVC
 
-  1- افزودن به پروژه
-  
-&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotationsCore) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+  1- &#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotationsCore) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
   PM> Install-Package PersianDataAnnotationsCore
 ```
-
-  2- نمونه فراخوانی و اجرا
-  
-  یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
+  2- &#x202b; فقط همین یک خط را اضافه کنید و کار تمام میشود
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -38,17 +27,13 @@ public void ConfigureServices(IServiceCollection services)
 
 ## &#x202b; شیوه استفاده در ASP.NET MVC
 
-  1- افزودن به پروژه
-  
-&#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
+  1- &#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
   PM> Install-Package PersianDataAnnotations -Version
 ```
 
-  2- نمونه فراخوانی و اجرا
-  
-  یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
+  2- &#x202b; یعنی فقط همین یک خط را اضافه کنید و کار تمام میشود
 ```c#
 protected void Application_Start()
 {
@@ -56,9 +41,8 @@ protected void Application_Start()
 }
 ```
 
-  3- فارسی سازی خطاهای مربوط به رمز عبور
-  
-با این تغییر کوچک خطاهای قسمت ثبت نام هم فارسی می شوند
+  3- &#x202b; فارسی سازی خطاهای مربوط به رمز عبور و قسمت ثبت نام
+
 ```c#
 public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
 {
