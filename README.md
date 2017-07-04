@@ -1,9 +1,7 @@
 ## &#x202b;فارسی سازی خطاهای MVC
 ## &#x202b;DataAnnotations فارسی
 ## Persian DataAnnotations
-Persian DataAnnotations is Localized DataAnnotations which is localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian Asp .Net MVC and other type of Microsoft .Net based application.
-The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
-
+Persian DataAnnotations as DataAnnotations localizer library, is a localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian ASP.NET Core MVC & ASP.NET MVC based applications. The localization of built-in resource of DataAnnotations is a bit hard to work (specialy in ASP.NET MVC) and this library helps your project for localization error messages just with single call a method. `Fork` and `Translate` RESX resources for your language ;-)
 
 
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
