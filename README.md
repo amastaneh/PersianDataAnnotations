@@ -26,7 +26,12 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
   
   یعنی فقط همین یک خط را اضافه کنید و تمام میشود.
 
-
+```c#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc(options => options.ModelMetadataDetailsProviders.Add(new PersianDataAnnotationsCore.PersianValidationMetadataProvider()));
+}
+```
 
 ## &#x202b; شیوه استفاده در ASP.NET MVC
 
@@ -35,7 +40,7 @@ The localization of built-in resource of DataAnnotations is a bit hard to work a
 &#x202b; با استفاده از [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) به سادگی می توانید این کتابخانه را به پروژه خود اضافه کنید
   
 ```
-  PM> Install-Package PersianDataAnnotations
+  PM> Install-Package PersianDataAnnotations -Version 1.5.1
 ```
 
   2- نمونه فراخوانی و اجرا
@@ -72,7 +77,8 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 <img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7716477/dd77299a-fea7-11e4-8b85-695e9f919f00.png" width="320">
 
 ## ترجمه
-&#x202b;‫هنوز احتمال دارد که خطاهایی فارسی نشده باشند. از نسخه 1.5 به بعد یک متد استاتیک ترجمه نظیر به نظیر خطا هم اضافه شده که خطاها را می تواند قبل از نمایش تا حد امکان ترجمه کند.
+&#x202b;‫هنوز احتمال دارد که خطاهایی فارسی نشده باشند. در نسخه های مربوط به پروژه های ASP.NET MVC یک متد استاتیک ترجمه نظیر به نظیر خطا هم اضافه شده که خطاها را می تواند قبل از نمایش تا حد امکان ترجمه کند.
+
 ```c#
 private void AddErrors(IdentityResult result)
 {
@@ -83,6 +89,12 @@ private void AddErrors(IdentityResult result)
 }
 ```
 &#x202b; متد بالا در کلاس های پیش فرض AccountController یا مشابه آن وجود دارد فقط به آن ترجمه متن خطا اضافه شده است
+
+&#x202b;‫البته مشابه این متد استاتیک برای نسخه های ASP.NET MVC Core هم وجود دارد
+```c#
+var result = PersianDataAnnotationsCore.PersianValidationMetadataProvider.ToPersian(value)
+```
+
 
 
 ## نکات
