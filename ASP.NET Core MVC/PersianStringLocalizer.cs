@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System;
+using System.Reflection.Metadata.Ecma335;
 using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Localization;
@@ -7,6 +8,9 @@ using System.Globalization;
 
 namespace PersianDataAnnotationsCore
 {
+    // 201707050022AMA: این کلاس و این شیوه به علت عدم پوشش ترجمه 
+    // همه متن ها خصوصا متن های اعتبارسنجی های سمت سرور کنارگذاشته شد
+    [Obsolete]
     public class PersianStringLocalizer : IStringLocalizer
     {
         private string _CultureName = null;
@@ -15,7 +19,6 @@ namespace PersianDataAnnotationsCore
 
         // در صورتی که تنظیم شده باشد که در فرهنگ فارسی کند برای سایر فرهنگ ها نیازی به ترجمه نیست
         private bool IsLocalizationRequired => !(_JustInPersianCulture && _CultureName != "fa-IR");
-
 
 
         public PersianStringLocalizer() : this(CultureInfo.CurrentUICulture, false) { }
