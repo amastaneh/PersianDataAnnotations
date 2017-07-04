@@ -4,12 +4,15 @@
 Persian DataAnnotations is Localized DataAnnotations which is localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian Asp .Net MVC and other type of Microsoft .Net based application.
 The localization of built-in resource of DataAnnotations is a bit hard to work and this solution helps project to use of this solution (just for localization of error messages).
 
+
+
 ## &#x202b;اعتبار سنجی کنترل ها در .NET با Data Annotation ها
 &#x202b;استفاده از `DataAnnotation` ها و افزودن `[Required]` یا `[DataType(DataType.Password)]` یا دیگر `Attribute` ها، کار اعتبارسنجی سمت کلاینت را بسیار ساده کرده است. برای فارسی سازی مقادیر پیش فرض کافی است این کتابخانه را با استفاده [نیوگت / NuGet](https://nuget.org/packages/PersianDataAnnotations) یا به صورت دستی به پروژه اضافه کنید. 
 
 &#x202b;در پروژه‌های `ASP.NET MVC` کافی است `RegisterAdapters` را فقط یکبار در `Application_Start` فراخوانی کنید.
 
 &#x202b;در پروژه‌های `ASP.NET Core MVC`  باید `AddDataAnnotationsLocalization` را در `ConfigureServices` فراخوانی کنید.
+
 
 
 ## &#x202b; شیوه استفاده در ASP.NET Core MVC
@@ -32,6 +35,8 @@ public void ConfigureServices(IServiceCollection services)
     services.AddMvc(options => options.ModelMetadataDetailsProviders.Add(new PersianDataAnnotationsCore.PersianValidationMetadataProvider()));
 }
 ```
+
+
 
 ## &#x202b; شیوه استفاده در ASP.NET MVC
 
@@ -67,6 +72,8 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 }
 ```
 
+
+
 ## دمو
 برای مشاهده دمو می توانید به فرم عضویت یا ورود کاربران در [طراحی وب ایران](http://webdesigniran.com) مراجعه کنید
 
@@ -75,6 +82,8 @@ public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUs
 نمونه فارسی سازی خطاهای مربوط به رمز عبور
 
 <img alt="screencapture-webdesigniran" src="https://cloud.githubusercontent.com/assets/6195199/7716477/dd77299a-fea7-11e4-8b85-695e9f919f00.png" width="320">
+
+
 
 ## ترجمه
 &#x202b;‫هنوز احتمال دارد که خطاهایی فارسی نشده باشند. در نسخه های مربوط به پروژه های ASP.NET MVC یک متد استاتیک ترجمه نظیر به نظیر خطا هم اضافه شده که خطاها را می تواند قبل از نمایش تا حد امکان ترجمه کند.
@@ -103,6 +112,7 @@ var result = PersianDataAnnotationsCore.PersianValidationMetadataProvider.ToPers
 *	سعی شده نقطه از آخر پیام ها حذف شود برای انطباق بیشتر با برنامه های چپ به راست
 *	سعی شده پیام ها با فارسی روان نه پارسی بسیار ادبی و دور از ادبیات عامه بیان شود
 *	سعی شده از بیشتر از است به جای مصدر نادرست باشیدن استفاده شود
+
 
 
 ## پشتیبانی
