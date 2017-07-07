@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Tracing;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -70,13 +69,13 @@ namespace PersianDataAnnotationsCore
                                     attDataType.ErrorMessage = ToPersian(DataAnnotationsResources.ValidationAttribute_ValidationError);
                                     break;
                                 default:
-                                    //Debug.Assert(false, $"PersianDataAnnotationsCore: وضعیت پیش بینی نشده‌ای برای بومی سازی {att?.GetType()?.ToString() ?? "null"} باید بررسی شود!! لطفا اطلاع دهید.");
+                                    Debug.Assert(false, $"PersianDataAnnotationsCore: وضعیت پیش بینی نشده‌ای برای بومی سازی {att?.GetType()?.ToString() ?? "null"} باید بررسی شود!! لطفا اطلاع دهید.");
                                     att.ErrorMessage = typeof(ValidationAttribute).GetProperty("ErrorMessageString")?.GetValue(att)?.ToString();
                                     break;
                             }
                             break;
                         default:
-                            //Debug.Assert(false, $"PersianDataAnnotationsCore: وضعیت پیش بینی نشده‌ای برای بومی سازی {att?.GetType()?.ToString() ?? "null"} باید بررسی شود! لطفا اطلاع دهید.");
+                            Debug.Assert(false, $"PersianDataAnnotationsCore: وضعیت پیش بینی نشده‌ای برای بومی سازی {att?.GetType()?.ToString() ?? "null"} باید بررسی شود! لطفا اطلاع دهید.");
                             att.ErrorMessage = typeof(ValidationAttribute).GetProperty("ErrorMessageString")?.GetValue(att)?.ToString();
                             break;
                     }
