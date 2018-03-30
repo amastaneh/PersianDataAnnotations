@@ -1,4 +1,6 @@
 ## Persian DataAnnotations
+[![Gitter](https://badges.gitter.im/webdesigniran/PersianDataAnnotations.svg)](https://gitter.im/webdesigniran/PersianDataAnnotations?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 Persian DataAnnotations as DataAnnotations localizer library, is a localization of System.ComponentModel.DataAnnotations for Persian (Farsi) language. It's useful for Persian ASP.NET Core MVC & ASP.NET MVC based applications. The localization of built-in resource of DataAnnotations is a bit hard to work (specialy in ASP.NET MVC) and this library helps your project for localization error messages just with single call a method. `Fork` and `Translate` RESX resources for your language ;-)
 
 
