@@ -10,7 +10,6 @@
 
 namespace PersianDataAnnotationsCore {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -20,7 +19,7 @@ namespace PersianDataAnnotationsCore {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class DataAnnotationsResourcesFa {
@@ -40,7 +39,7 @@ namespace PersianDataAnnotationsCore {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PersianDataAnnotationsCore.DataAnnotationsResourcesFa", typeof(DataAnnotationsResourcesFa).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PersianDataAnnotationsCore.DataAnnotationsResourcesFa", typeof(DataAnnotationsResourcesFa).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -333,6 +332,24 @@ namespace PersianDataAnnotationsCore {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to رمز جدید و تکرار آن یکی نیستند.
+        /// </summary>
+        internal static string New_Password_Not_Matched {
+            get {
+                return ResourceManager.GetString("New_Password_Not_Matched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to رمز و تکرار آن یکی نیستند.
+        /// </summary>
+        internal static string Password_Not_Matched {
+            get {
+                return ResourceManager.GetString("Password_Not_Matched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to مقدار {0} یک شماره تلفن معتبر نیست.
         /// </summary>
         internal static string PhoneAttribute_Invalid {
@@ -483,6 +500,15 @@ namespace PersianDataAnnotationsCore {
         internal static string UrlAttribute_Invalid {
             get {
                 return ResourceManager.GetString("UrlAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} باید حداقل {2} و حداکثر {1} کاراکتر باشد..
+        /// </summary>
+        internal static string Validation_Min_Max_Length {
+            get {
+                return ResourceManager.GetString("Validation_Min_Max_Length", resourceCulture);
             }
         }
         

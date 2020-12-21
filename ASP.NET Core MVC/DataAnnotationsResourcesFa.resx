@@ -208,6 +208,12 @@
   <data name="MinLengthAttribute_ValidationError" xml:space="preserve">
     <value>حداقل طول {0} می تواند {1} باشد</value>
   </data>
+  <data name="New_Password_Not_Matched" xml:space="preserve">
+    <value>رمز جدید و تکرار آن یکی نیستند</value>
+  </data>
+  <data name="Password_Not_Matched" xml:space="preserve">
+    <value>رمز و تکرار آن یکی نیستند</value>
+  </data>
   <data name="PhoneAttribute_Invalid" xml:space="preserve">
     <value>مقدار {0} یک شماره تلفن معتبر نیست</value>
   </data>
@@ -283,6 +289,9 @@
   </data>
   <data name="ValidationContext_Must_Be_Method" xml:space="preserve">
     <value>The ValidationContext for the type '{0}', member name '{1}' must provide the MethodInfo.</value>
+  </data>
+  <data name="Validation_Min_Max_Length" xml:space="preserve">
+    <value>{0} باید حداقل {2} و حداکثر {1} کاراکتر باشد.</value>
   </data>
   <data name="Validator_InstanceMustMatchValidationContextInstance" xml:space="preserve">
     <value>The instance provided must match the ObjectInstance on the ValidationContext supplied.</value>

@@ -10,7 +10,6 @@
 
 namespace PersianDataAnnotationsCore {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -20,7 +19,7 @@ namespace PersianDataAnnotationsCore {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class DataAnnotationsResources {
@@ -40,7 +39,7 @@ namespace PersianDataAnnotationsCore {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PersianDataAnnotationsCore.DataAnnotationsResources", typeof(DataAnnotationsResources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PersianDataAnnotationsCore.DataAnnotationsResources", typeof(DataAnnotationsResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -332,6 +331,24 @@ namespace PersianDataAnnotationsCore {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The new password and confirmation password do not match..
+        /// </summary>
+        internal static string New_Password_Not_Matched {
+            get {
+                return ResourceManager.GetString("New_Password_Not_Matched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirmation password do not match..
+        /// </summary>
+        internal static string Password_Not_Matched {
+            get {
+                return ResourceManager.GetString("Password_Not_Matched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The {0} field is not a valid phone number..
         /// </summary>
         internal static string PhoneAttribute_Invalid {
@@ -481,6 +498,15 @@ namespace PersianDataAnnotationsCore {
         internal static string UrlAttribute_Invalid {
             get {
                 return ResourceManager.GetString("UrlAttribute_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} must be at least {2} and at max {1} characters long..
+        /// </summary>
+        internal static string Validation_Min_Max_Length {
+            get {
+                return ResourceManager.GetString("Validation_Min_Max_Length", resourceCulture);
             }
         }
         
